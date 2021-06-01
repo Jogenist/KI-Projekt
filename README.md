@@ -8,3 +8,8 @@
 # CNN
 1. unzip 'InputData'
 2. run code
+
+# Decision Tree
+1. unzip 'InputData'
+2. create empty folder named 'InputData_resized'
+3. run code
