@@ -15,3 +15,6 @@
 2. create empty folder named 'InputData_resized'
 3. run code
 => accuracy ca. 0.65
+
+# Feature Extraction
+
