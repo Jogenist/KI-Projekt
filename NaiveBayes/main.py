@@ -49,27 +49,6 @@ def prepareTraining(df):
     #print('X_test: ', X_test.shape, ' y_test: ', y_test.shape)
     return X_train, X_test, y_train, y_test
 
-def naiveBayesAuto(X_train, X_test, y_train, y_test):
-    from sklearn.naive_bayes import GaussianNB
-    from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
-    from sklearn.metrics import confusion_matrix
-
-    gaussian = GaussianNB()
-    gaussian.fit(X_train, y_train)
-    Y_pred = gaussian.predict(X_test)
-    accuracy_nb = round(accuracy_score(y_test, Y_pred) * 100, 2)
-    acc_gaussian = round(gaussian.score(X_train, y_train) * 100, 2)
-    cm = confusion_matrix(y_test, Y_pred)
-    accuracy = accuracy_score(y_test, Y_pred)
-    precision = precision_score(y_test, Y_pred, average='micro')
-    recall = recall_score(y_test, Y_pred, average='micro')
-    f1 = f1_score(y_test, Y_pred, average='micro')
-    print('Confusion matrix for Naive Bayes\n', cm)
-    print('accuracy_Naive Bayes: %.3f' % accuracy)
-    print('precision_Naive Bayes: %.3f' % precision)
-    print('recall_Naive Bayes: %.3f' % recall)
-    print('f1-score_Naive Bayes : %.3f' % f1)
-
 
 # Calculate the mean of a list of numbers
 def mean(numbers):
