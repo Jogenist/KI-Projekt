@@ -23,3 +23,6 @@ extract Area, Perimeter, Convex (bool) and detected HarrisCorners
 NaiveBayes Classifier mit Feature-Excel
 => accuracy ca. 0.69
 
+# To-Do
+- zwei weitere Verfahren von Hand
+- Bewertungsmerkmale für die einzelnen Verfahren berechnen (Precision, Recall, F1-Score)
