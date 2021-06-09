@@ -21,8 +21,11 @@ extract Area, Perimeter, Convex (bool) and detected HarrisCorners
 
 # NaiveBayesClassifier (erstes Verfahren "von Hand")
 NaiveBayes Classifier mit Feature-Excel
-=> accuracy ca. 0.69
+=> accuracy ca. 0.67
+=> precision 0.679
+=> recall 0.679
+=> F1-Score 0.679
 
 # To-Do
 - zwei weitere Verfahren von Hand
-- Bewertungsmerkmale für die einzelnen Verfahren berechnen (Precision, Recall, F1-Score)
+- nachvollziehen warum accuracy, precision, recall und f1-score genau gleich sind (ist glaube ich normal, aber warum?)
