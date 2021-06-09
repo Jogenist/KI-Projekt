@@ -133,14 +133,19 @@ def predict(summaries, row):
             best_label = class_value
     return best_label
 
-# Naive Bayes Algorithm
-def naive_bayes(train, test):
-    summarize = summarizebyclass(train)
-    predictions = []
-    for row in test:
-        output = predict(summarize, row)
-        predictions.append(output)
-    return(predictions)
+
+def evaluate(y_pred, y_test):
+    from sklearn.metrics import accuracy_score, precision_score, recall_score, f1_score
+    from sklearn.metrics import confusion_matrix
+    precision = precision_score(y_test, y_pred, average='micro')
+    recall = recall_score(y_test, y_pred, average='micro')
+    f1 = f1_score(y_test, y_pred, average='micro')
+    cm = confusion_matrix(y_test, y_pred)
+    print('Confusion matrix for Naive Bayes\n', cm)
+    print('precision_Naive Bayes: %.3f' % precision)
+    print('recall_Naive Bayes: %.3f' % recall)
+    print('f1-score_Naive Bayes : %.3f' % f1)
+
 
 
 filename = 'Features.csv'
@@ -155,18 +160,21 @@ for i in range(4):
     std.append(stddev(list))
 # print(Sum)
 # print(std)
-#separate = separate_by_class(X_train,y_train)
 summary = summarizebyclass(X_test,y_test)
 print(summary)
 correct = 0
+y_pred_lst = []
 for i in range(len(y_test)):
     test = predict(summary, X_test.iloc[i])
     print(i, ". Ergebnis: ",test)
     print(i, ". Soll: ",y_test.iloc[i])
     if test == y_test.iloc[i]:
         correct +=1
-print("Accuracy: ", correct/float(len(y_test)) * 100.0)
+    y_pred_lst.append(test)
 
+print("Accuracy: ", correct/float(len(y_test)) * 100.0)
+y_pred = pandas.DataFrame(y_pred_lst)
+evaluate(y_test, y_pred)
 
 
 
