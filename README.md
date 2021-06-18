@@ -26,6 +26,11 @@ NaiveBayes Classifier mit Feature-Excel
 => recall 0.679
 => F1-Score 0.679
 
+# KNNClassifier (zweites Verfahren "von Hand")
+k-nearest-neighbor classifier mit Feature-Excel
+=> accuracy ca. 0.66
+
 # To-Do
-- zwei weitere Verfahren von Hand
+- ein weiteres Verfahren von Hand
 - nachvollziehen warum accuracy, precision, recall und f1-score genau gleich sind (ist glaube ich normal, aber warum?)
+- Aufbereiten der Codes (kommentieren, vorzeigbar machen)
