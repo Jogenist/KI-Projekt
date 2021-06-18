@@ -32,5 +32,6 @@ k-nearest-neighbor classifier mit Feature-Excel
 
 # To-Do
 - ein weiteres Verfahren von Hand
+- precision, recall und f1-score bei KNN einfügen
 - nachvollziehen warum accuracy, precision, recall und f1-score genau gleich sind (ist glaube ich normal, aber warum?)
 - Aufbereiten der Codes (kommentieren, vorzeigbar machen)
